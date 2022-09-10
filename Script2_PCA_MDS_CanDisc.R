@@ -1,4 +1,6 @@
+#####################################
 ### PRINCIPAL COMPONENT ANALYSIS ####
+#####################################
 
 pca = prcomp(Proc_coords_R, scale=T)
 pca
@@ -133,8 +135,9 @@ legend("topright", legend=levels(measure), pch=15, col=unique(measure),inset=c(-
 pca3d(pca, group=class_global_3)
 
 
-
+#################################
 ### MULTIDIMENSIONAL SCALING ####
+#################################
 
 mds = cmdscale(mat,eig=TRUE,k=2)
 mds
@@ -206,8 +209,10 @@ ggscatter(mds.cor, x = "Dim.1", y = "Dim.2",
           repel = TRUE)
 
 
-
+########################################
 ### CANONICAL DISCRIMINANT ANALYSIS ####
+########################################
+
 
 ### FUNCTIONS ####
 # Hotelling's test - Morphometrics with R
